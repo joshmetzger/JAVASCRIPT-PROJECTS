@@ -20,7 +20,7 @@ function chop(){
 console.log('the is all uppercase now'.toUpperCase())
 
 var ex = 'to ensure proper credit please detach..';
-// show the first index number of where the string or charachter is found
+// show the first index number of where the string or charachter is
 console.log(ex.search('O'))
 
 
