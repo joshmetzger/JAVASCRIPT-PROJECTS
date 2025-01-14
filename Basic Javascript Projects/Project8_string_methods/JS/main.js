@@ -4,11 +4,9 @@ var s3 = 'award winning sentence.';
 
 function concaroo(){
    var sentence = s1.concat(s2, s3);
-//    document.getElementById('junt').innerHTML = sentence;
-   console.log(sentence);
+   document.getElementById('junt').innerHTML = sentence;
 }
 
-concaroo();
 
 function chop(){
     var sent = "it was sunny most of the day";
@@ -16,20 +14,35 @@ function chop(){
     document.getElementById('sent').innerHTML = bit;
 }
 
+function upper(){
+    var text = document.getElementById('up').innerHTML
+    document.getElementById('uppy').innerHTML = text.toUpperCase();
+}
 
-console.log('the is all uppercase now'.toUpperCase())
 
-var ex = 'to ensure proper credit please detach..';
-// show the first index number of where the string or charachter is
-console.log(ex.search('O'))
+function searchString(){
+    var ex = 'to ensure proper credit please detach..';
+    // show the first index number of where the string or charachter is
+    document.getElementById('surch').innerHTML = ex.search('d')
+}
 
 
 var num = 4573.2839365438
-console.log(typeof num.toString())
+
+function makeString(){
+    document.getElementById('makeString').innerHTML = typeof num.toString() + ', number: ' + num.toString()
+}
+
+
 // will show this many charachters on both sides of decimal
-console.log(num.toPrecision(6))
+function prec(){
+    document.getElementById('prec').innerHTML = num.toPrecision(6)
+}
+
 // shows this many numbers to the right of the decimal
-console.log(num.toFixed(9))
+function fixed(){
+    document.getElementById('fixy').innerHTML = num.toFixed(9)
+}
 
 function makeNumberObject(n) {
     this.number = n;
@@ -41,4 +54,8 @@ makeNumberObject.valueOf = function () {
 
 const object1 = new makeNumberObject(4);
 
-console.log(typeof object1)
+function numberObject(){
+    document.getElementById('number').innerHTML = typeof object1
+}
+
+// console.log(typeof object1)
