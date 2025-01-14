@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Using the Conosole to debug code</title>
+</head>
+<body onload="pageLoad()">
+    <button onclick="clickCount()">Click Count</button>
+    <button onclick="resetCount()">Reset Count</button>
+    <p id="counter"></p>
+    <script>
+        function pageLoad(){
+            var greeting = "Welcome to "
+            greeting += "learning how to debug code ";
+            greeting += "using the console with dev tools!";
+            window.alert(greeting);
+        }
+
+        var count = 0;
+
+        function clickCount(){
+            count++;
+            document.getElementById("counter").innerHTML = count;
+        }
+
+        function resetCount(){
+            var count = "";
+            document.getElementById('counter').innerHTML = count;
+        }
+    </script>
+</body>
+</html>
