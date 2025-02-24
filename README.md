@@ -5,9 +5,9 @@ projects for Tech Academy JS Course
 ## Projects
 
 
-[Pizza Menu](https://github.com/joshmetzger/JAVASCRIPT-PROJECTS/tree/main/Pizza_Project)
-[Tic Tac Toe Game](https://github.com/joshmetzger/JAVASCRIPT-PROJECTS/tree/main/TicTacToe)
-[Calculator](https://github.com/joshmetzger/JAVASCRIPT-PROJECTS/tree/main/Calculator)
+[Pizza Menu](https://github.com/joshmetzger/JAVASCRIPT-PROJECTS/tree/main/Pizza_Project)<br>
+[Tic Tac Toe Game](https://github.com/joshmetzger/JAVASCRIPT-PROJECTS/tree/main/TicTacToe)<br>
+[Calculator](https://github.com/joshmetzger/JAVASCRIPT-PROJECTS/tree/main/Calculator)<br>
 
 
 ## Pizza Menu
