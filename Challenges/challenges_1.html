@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>challenges</title>
+    <style>
+        html{
+            scroll-behavior: smooth;
+        }
+        #pick {
+            opacity: 1;
+            transition: 10s opacity;
+        }
+    
+        #pick.fade-in {
+            opacity: 0;
+            transition: ease-in;
+        }
+
+        .form-popup{
+            display: none;
+            position: fixed;
+        }
+
+        #block{
+            width: 50px;
+            height: 50px;
+            background-color: brown;
+            position: relative;
+            animation: mymove 5s infinite;
+        }
+
+        /* block animation */
+        @keyframes mymove {
+            from {top: 0px;}
+            to {top: 100px;}
+        }
+
+
+        /* porsche zoom */
+        @keyframes zoominout {
+            0% {
+                transform: scale(1,1);
+            }
+            50% {
+                transform: scale(1.2,1.2);
+            }
+            100% {
+                transform: scale(1,1);
+            }
+        }
+
+        img{
+            animation: zoominout 15s forwards;
+        }
+    </style>
+</head>
+<body>
+    <a href="#booky">jump to the bookmark</a>
+
+    <h1 id="pick" style="font-size: 10vw;">Pick the ugliest dog from this list:</h1>
+
+
+    <button class="open-button" onclick="openForm()">Open Form</button>
+
+    <div class="form-popup" id="myForm">
+        <form name="myForm"  action="" onsubmit="validate()">
+            <input name="fullname" type="text" placeholder="enter name">
+            <input name="email" type="email" placeholder="enter email">
+            <input name="phone" type="tel" placeholder="enter phone">
+            <input type="submit">
+
+        </form>
+        <button class="btn cancel" onclick="closeForm()">Close</button>
+
+    </div>
+
+
+
+
+    <div id="block"></div>
+
+    <img src="porsche.jpg" height="300" alt="">
+
+
+    <h2 id="booky">here is the bookmark</h2>
+
+    <script>
+        document.getElementById('pick').classList.add('fade-in');
+
+        window.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('pick').classList.remove('fade-in');
+        });
+
+        function validate(){
+            // console.log(document.forms['myForm']['fullname'].value)
+            let fullname = document.forms['myForm']['fullname'].value;
+            let email = document.forms['myForm']['email'].value;
+            let phone = document.forms['myForm']['phone'].value;
+
+            if(fullname == ""){
+                alert('name must be filled out');
+                return false;
+            } else if(email == "") {
+                alert('email must be filled out');
+                return false;
+            } else if (phone == "") {
+                alert('phone must be filled out');
+                return false;
+            }
+        }
+
+        function openForm(){
+            document.getElementById("myForm").style.display = "block";
+        }
+
+        function closeForm(){
+            document.getElementById("myForm").style.display = "none";
+        }
+    </script>
+    
+</body>
+</html>

@@ -6,8 +6,19 @@
     <title>Document</title>
     <script src="Javascript/Javascript_1.js" defer></script>
 </head>
+<style>
+    #pick {
+        opacity: 1;
+        transition: 10s opacity;
+    }
+
+    #pick.fade-in {
+        opacity: 0;
+        transition: ease-in;
+    }
+</style>
 <body>
-    <h1>Pick the ugliest dog from this list:</h1>
+    <h1 id="pick">Pick the ugliest dog from this list:</h1>
     <ul>
         <li class="li">pug</li>
         <li class="li">greyhound</li>
@@ -23,7 +34,11 @@
 
     <button onclick="changeItems()">click to change list items</button>
     <br>
+
     
     <canvas id="canvy" width="500" height="250" style="border:5px solid black;"></canvas>
+
+    
+    
 </body>
 </html>
